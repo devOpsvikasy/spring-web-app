@@ -6,7 +6,7 @@ pipeline{
     stages{
        stage('GetCode'){
             steps{
-                git 'https://github.com/Sharath8000/hello-world.git'
+                git 'https://github.com/devOpsvikasy/spring-web-app.git'
             }
          }        
        stage('Build & deploy'){
