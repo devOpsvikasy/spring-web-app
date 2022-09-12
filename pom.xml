@@ -34,6 +34,17 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+	
+	<distributionManagement>
+          <repositories>
+            <repository>
+                    <id>nexus</id>
+                    <name>Maven-Hosted</name>
+                    <url>http://34.236.152.13:8081/repository/Maven-Hosted/</url>
+           </repository>
+          </repositories>
+   
+  </distributionManagement>
 
 	<build>
 		<plugins>
