@@ -11,7 +11,7 @@ pipeline{
          }        
        stage('Build & deploy'){
             steps{
-                sh 'mvn clean deploy -X'
+                sh 'mvn clean deploy'
             }
          }
         stage('SonarQube analysis') {
