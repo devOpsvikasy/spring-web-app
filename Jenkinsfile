@@ -11,7 +11,7 @@ pipeline{
          }        
        stage('Build & deploy'){
             steps{
-                sh 'mvn clean deploy -DrepositoryId=nexus -DskipTests'
+                sh 'mvn clean deploy -DrepositoryId=Maven-Hosted -DskipTests'
             }
          }
         stage('SonarQube analysis') {
