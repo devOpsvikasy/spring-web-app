@@ -4,7 +4,7 @@
 
 <server>
       <id>nexus</id>
-      <username>jenkins</username>
+      <username>admin</username>
       <password>admin@123</password>
 </server>
 
