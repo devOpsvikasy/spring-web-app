@@ -11,7 +11,8 @@ pipeline{
          }        
        stage('Build & deploy'){
             steps{
-                sh 'mvn clean deploy -DskipTests -e'
+                sh 'mvn help:effective-settings'
+              //  sh 'mvn clean deploy -DskipTests -e'
             }
          }
         stage('SonarQube analysis') {
