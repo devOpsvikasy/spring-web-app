@@ -11,11 +11,11 @@ pipeline{
          }        
        stage('Build & deploy'){
             steps{
-                sh 'mvn help:effective-settings'
+                sh 'mvn deploy'
               //  sh 'mvn clean deploy -DskipTests -e'
             }
          }
-        stage('SonarQube analysis') {
+      /*  stage('SonarQube analysis') {
         //    def scannerHome = tool 'SonarScanner 4.0';
         steps{
         withSonarQubeEnv('sonarqube') { 
@@ -23,7 +23,7 @@ pipeline{
         //      sh "${scannerHome}/bin/sonar-scanner"
         sh "mvn sonar:sonar"
                 }
-            }
+            } */
         }
           
     }
