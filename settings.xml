@@ -41,9 +41,13 @@ under the License.
  | values (values used when the setting is not specified) are provided.
  |
  |-->
+
+
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+
   <!-- localRepository
    | The path to the local repository maven will use to store artifacts.
    |
@@ -147,9 +151,10 @@ under the License.
      | this mirror serves has an ID that matches the mirrorOf element of this mirror. IDs are used
      | for inheritance and direct lookup purposes, and must be unique across the set of mirrors.
      | -->
+
     <mirror>
       <id>nexus</id>
-      <mirrorOf>maven-dependency</mirrorOf>
+      <mirrorOf>central</mirrorOf>
       <name>maven-group-repo</name>
       <url>http://34.226.202.185:8081/repository/maven-group-repo/</url>
     </mirror>
@@ -180,7 +185,7 @@ under the License.
   
   <!--
   <profiles>
-    <!-- profile
+     profile
      | Specifies a set of introductions to the build process, to be activated using one or more of the
      | mechanisms described above. For inheritance purposes, and to activate profiles via <activatedProfiles/>
      | or the command line, profiles have to have an ID that is unique.
@@ -231,14 +236,12 @@ under the License.
 <!--
     <profile>
       <id>env-dev</id>
-
       <activation>
         <property>
           <name>target-env</name>
           <value>dev</value>
         </property>
       </activation>
-
       <properties>
         <tomcatPath>/path/to/tomcat/instance</tomcatPath>
       </properties>
@@ -267,8 +270,7 @@ under the License.
    </profile>
     
   </profiles>
-
-  <!-- activeProfiles
+   activeProfiles
    | List of profiles that are active for all builds.
    |
   <activeProfiles>
