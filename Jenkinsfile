@@ -22,9 +22,10 @@ pipeline{
         // If you have configured more than one global server connection, you can specify its name
         //      sh "${scannerHome}/bin/sonar-scanner"
         //sh "mvn sonar:sonar"
-         sh 'mvn sonar:sonar -U -Dsonar.branch.name=$BRANCH_NAME'
+         sh 'mvn sonar:sonar'
                 }
             }
         }
           
+    }
 }
